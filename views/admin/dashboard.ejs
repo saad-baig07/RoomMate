@@ -1,0 +1,28 @@
+<% layout("/layouts/boilerplate") %>
+
+<div class="container mt-5">
+  <h2 class="mb-4">Admin Dashboard</h2>
+
+  <div class="row text-center">
+    <div class="col-md-4">
+      <div class="card p-3 shadow">
+        <h4>Total Users</h4>
+        <h2><%= usersCount %></h2>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card p-3 shadow">
+        <h4>Total Listings</h4>
+        <h2><%= listingsCount %></h2>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card p-3 shadow">
+        <h4>Total Reviews</h4>
+        <h2><%= reviewsCount %></h2>
+      </div>
+    </div>
+  </div>
+</div>

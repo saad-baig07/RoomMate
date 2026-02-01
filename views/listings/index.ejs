@@ -1,0 +1,24 @@
+<% layout("/layouts/boilerplate") %>
+
+<h3 class="mt-2">All Listings</h3>
+
+<div class="row g-4">
+  <% for (let listing of allListing) { %>
+    <div class="col-lg-4 col-md-6 col-sm-12">
+      <a href="/listings/<%= listing._id %>" class="cards_func">
+        <div class="card h-100">
+          <img src="<%= listing.image.url %>" class="card-img-top img-list">
+          <div class="card-body">
+            <p class="card-text">
+              <b><%= listing.title %></b><br>
+              <small class="text-muted">
+                Published by <%= listing.owner ? listing.owner.username : "Unknown" %>
+              </small><br>
+              ₹ <%= listing.price.toLocaleString("en-IN") %>/Night
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+  <% } %>
+</div>

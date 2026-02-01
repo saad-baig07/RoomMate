@@ -1,0 +1,57 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light px-4">
+  <a class="navbar-brand brand-text" href="/listings">
+    <i class="fa-solid fa-compass"></i> Roommate
+  </a>
+
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+    data-bs-target="#navbarNav" aria-controls="navbarNav"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNav">
+
+
+    <!-- LEFT SIDE LINKS --> 
+    <ul class="navbar-nav me-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/listings">All Listings</a>
+      </li>
+
+
+
+      <!-- ✅ ADD LISTING (LOGIN ONLY) -->
+      <% if (currentUser) { %>
+        <li class="nav-item">
+          <a class="nav-link" href="/listings/new">Add Listing</a>
+        </li>
+      <% } %>
+    </ul>
+    <% if (currentUser && currentUser.role === "admin") { %>
+  <a href="/admin/users" class="btn btn-warning ms-2">
+    User List
+  </a>
+<% } %>
+
+
+    <!-- RIGHT SIDE BUTTONS -->
+    <div class="d-flex gap-2">
+      <% if (!currentUser) { %>
+        <a href="/login" class="btn btn-outline-danger btn-sm">
+          Login
+        </a>
+        <a href="/signup" class="btn btn-danger btn-sm">
+          Sign Up
+        </a>
+      <% } else { %>
+        <span class="navbar-text me-2">
+          Hi, <b><%= currentUser.username %></b>
+        </span>
+        <a href="/logout" class="btn btn-danger btn-sm">
+          Logout
+        </a>
+      <% } %>
+    </div>
+
+  </div>
+</nav>
