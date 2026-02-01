@@ -1,28 +1,20 @@
 # RoomMate
-🚀 Project Overview
-RoommateHub is a dynamic, full-stack web application designed to streamline the process of finding and listing shared living spaces or hotels. Developed using the MEN stack (MongoDB, Express.js, and Node.js), this platform provides a seamless bridge between property owners and seekers. The application emphasizes a clean user experience, robust data management, and secure interaction, making it an ideal solution for modern housing needs.
+RoomMate is a full-stack web application designed to simplify finding and listing shared accommodations or hotels. Built using the MEN stack (MongoDB, Express, Node.js), it bridges the gap between property owners and seekers with a secure, user-friendly interface.
 
-🛠️ Technical Stack
-Frontend: HTML5, CSS3, and EJS (Embedded JavaScript) for dynamic templating.
+🛠️ Tech Stack & Architecture
+The project follows the MVC (Model-View-Controller) pattern for scalability.
 
-Styling: Bootstrap 5 for a mobile-first, responsive grid layout.
+Frontend: EJS, HTML5, and Bootstrap 5 for a responsive, mobile-first design.
 
-Backend: Node.js with the Express.js framework for efficient server-side logic.
+Backend: Node.js & Express.js.
 
-Database: MongoDB with Mongoose ODM for flexible, document-based data storage.
-
-Authentication: Session-based login/signup logic for secure user access.
+Database: MongoDB with Mongoose ODM for persistent storage.
 
 ✨ Key Features
-User Authentication & Authorization: A secure entry system where users can create accounts and log in. The app distinguishes between guests and registered users, ensuring that only authenticated individuals can create listings or post reviews.
+Secure Auth: Session-based login/signup logic for protected access.
 
-Listing Management (CRUD): Users can fully manage their property listings. This includes creating new entries, uploading detailed descriptions of hotels or rooms, and viewing a comprehensive gallery of available places.
+Listing CRUD: Full capability to create, view, update, and delete property listings and descriptions.
 
-Interactive Review System: To foster trust within the community, the platform features a dedicated review module. Users can share their experiences and rate locations, providing valuable feedback for future tenants.
+Review System: Interactive module for users to rate and review stays.
 
-Responsive UI: Leveraging Bootstrap’s utility classes, the interface is fully optimized for all devices, from high-resolution desktops to mobile screens.
-
-Data Persistence: Utilizing MongoDB, all user profiles, property descriptions, and reviews are stored securely, ensuring fast retrieval and high availability.
-
-🎯 Project Goal
-The primary objective of this project was to implement the Model-View-Controller (MVC) architecture in a real-world scenario. By separating data logic (Models), UI templates (Views), and routing logic (Controllers), the application remains scalable and easy to maintain.
+Reliable Data: Managed storage for user profiles and listings using MongoDB.
